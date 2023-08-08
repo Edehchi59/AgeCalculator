@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png" />
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <div class="title">
+        <h1>Age Calculator</h1>
+      </div>
+      <div class="calculatorWrapper">
+        <div class="calculatorContainer">
+          <div class="calculatorContainerFlex">
+            <!-- Day DD -->
+            <div class="inputBlock">
+              <label for="day" class="errorMsg">day:</label>
+              <input
+                type="number"
+                id="day"
+                min="1"
+                max="31"
+                class="errorFocus" />
+              <div id="error"><i></i></div>
+            </div>
+            <!-- Month MM  -->
+            <div class="inputBlock">
+              <label for="month" class="errorMsg">month:</label>
+              <input
+                type="number"
+                id="month"
+                min="1"
+                max="12"
+                class="errorFocus" />
+              <div id="error"><i></i></div>
+            </div>
+            <!-- Year YYYY -->
+            <div class="inputBlock">
+              <label for="year" class="errorMsg">year:</label>
+              <input
+                type="number"
+                id="year"
+                min="1900"
+                max="2099"
+                class="errorFocus" />
+              <div id="error"><i></i></div>
+            </div>
+          </div>
+          <div class="SvgImg" onclick="calculateAge()">
+            <img src="/assets/images/icon-arrow.svg" alt="icon-arrow" />
+          </div>
+          <div class="calculatorResults">
+            <div class="resultflex">
+              <div class="digits" id="years"></div>
+              <div class="word">years</div>
+            </div>
+            <div class="resultflex">
+              <div class="digits" id="months"></div>
+              <div class="word">months</div>
+            </div>
+            <div class="resultflex">
+              <div class="digits" id="days"></div>
+              <div class="word">days</div>
+            </div>
+          </div>
+          <!-- -- years -- months -- days -->
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Edeh chinedu daniel</a>.
+      </div>
+    </div>
+    <script src="/main.js"></script>
+  </body>
+</html>
